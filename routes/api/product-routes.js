@@ -40,12 +40,7 @@ router.get("/:id", async (req, res) => {
 // create new product
 router.post("/", async (req, res) => {
   try {
-    const newProductData = await Product.create({
-      product_name: req.body.product_name,
-      price: req.body.price,
-      stock: req.body.stock,
-      category_id: req.body.category_id,
-    });
+    const newProductData = await Product.create(req.body);
     res.status(200).json(newProductData);
   } catch (err) {
     res.status(400).json(err);
@@ -56,12 +51,9 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
   // update product data
   try {
+    console.log(req.body);
     const productUpdate = await Product.update(req.body, {
-      product_name: req.body.product_name,
-      price: req.body.price,
-      stock: req.body.stock,
-      category_id: req.body.category_id,
-      where: req.params.product_id,
+      where: { id: req.params.id },
     });
     res.status(200).json(productUpdate);
   } catch (err) {
