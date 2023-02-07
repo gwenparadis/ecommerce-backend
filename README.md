@@ -8,7 +8,8 @@ I created this E-Commerce Backend in order to create an interactive database to 
 
 This webpage is a backend program, that has not been deployed publicly. The code can be access in the following Github repository: https://github.com/gwenparadis/ecommerce-backend
 
-There is no visual for this application, as it does not have a front end.
+There is no visual for this application, as it does not have a front end. You can see the functionality of the code here:
+https://drive.google.com/file/d/17MyLdJ6GeWjsGvi-UIof24Y7NaFncKqw/view
 
 ## Usage
 
